@@ -13,7 +13,8 @@ class LetterBox(QLineEdit):
         self.setFixedWidth(LETTERBOX_PIXEL_SIZE)
         self.setFixedHeight(LETTERBOX_PIXEL_SIZE)
         self.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.setEnabled(False)
+        self.setReadOnly(False)
+        self.setFocusPolicy(Qt.NoFocus)
 
     @property
     def letter(self) -> str:
