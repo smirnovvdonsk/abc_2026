@@ -3,6 +3,8 @@ from PyQt5.QtWidgets import QApplication
 from gui.window import MainWindow
 
 def main():
+    QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True)
+    QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps, True)
     app = QApplication(sys.argv)
     window = MainWindow()
     window.show()
